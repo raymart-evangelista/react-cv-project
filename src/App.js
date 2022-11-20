@@ -3,12 +3,12 @@ import './App.css';
 import { Component } from 'react';
 import Input from './components/Input'
 import Section from './components/Section'
+import Button from './components/Button'
 
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        Hello World!
         <Section section='general' sectionTitle='General Information'>
           <Input labelText='Full Name' label='fullName' />
           <Input labelText='Email' label='email' />
@@ -27,6 +27,10 @@ class App extends Component {
           <Input labelText='Main Tasks of Job' label='tasks'/>
           <Input labelText='Date from:' label='dateFrom'/>
           <Input labelText='Date until:' label='dateUntil'/>
+        </Section>
+
+        <Section section='submission' sectionTitle='Submission'>
+          <Button/>
         </Section>
       </div>
     )
