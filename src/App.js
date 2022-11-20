@@ -12,6 +12,23 @@ class App extends Component {
 
     this.state = {
       inputList: [],
+      generalInfo: {
+        name: '',
+        email: '',
+        phone: '',
+      },
+      education: {
+        school: '',
+        study: '',
+        date: '',
+      },
+      experience: {
+        company: '',
+        position: '',
+        tasks: '',
+        from: '',
+        to: '',
+      }
     }
 
     this.handleChildInput = this.handleChildInput.bind(this)
@@ -32,6 +49,9 @@ class App extends Component {
   }
 
   handleSubmit = e => {
+    this.setState({
+      inputList: this.state.inputList.concat()
+    })
     console.log(e)
   }
 
