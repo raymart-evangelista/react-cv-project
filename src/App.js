@@ -6,31 +6,62 @@ import Section from './components/Section'
 import Button from './components/Button'
 
 class App extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      inputList: [],
+    }
+
+    this.handleChildInput = this.handleChildInput.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleChildInput = childInput => {
+    // childInput.inputLabel
+    // this.childInput = (childInput
+
+    // check if inputLabel name is already in array, if so, update, if not, add
+
+    this.setState({
+      inputList: this.state.inputList.concat(childInput),
+    })
+
+    console.log(this.state)
+  }
+
+  handleSubmit = e => {
+    console.log(e)
+  }
+
   render() {
     return (
       <div className='App'>
         <Section section='general' sectionTitle='General Information'>
-          <Input labelText='Full Name' label='fullName' />
-          <Input labelText='Email' label='email' />
-          <Input labelText='Phone Number' label='phoneNumber' />
+          <Input handleChildInput={this.handleChildInput} labelText='Full Name' label='fullName' />
+          {/* <Input handleChildInput={handleChildInput} labelText='Email' label='email' /> */}
+          {/* <Input handleChildInput={handleChildInput} labelText='Phone Number' label='phoneNumber' /> */}
         </Section>
-
+{/* 
         <Section section='educational' sectionTitle='Educational Experience'>
-          <Input labelText='School Name' label='school'/>
-          <Input labelText='Title of Study' label='study'/>
-          <Input labelText='Date of Study' label='studyDate'/>
+          <Input handleChildInput={handleChildInput} labelText='School Name' label='school'/>
+          <Input handleChildInput={handleChildInput} labelText='Title of Study' label='study'/>
+          <Input handleChildInput={handleChildInput} labelText='Date of Study' label='studyDate'/>
         </Section>
 
         <Section section='practical' sectionTitle='Practical Experience'>
-          <Input labelText='Company Name' label='company'/>
-          <Input labelText='Position Title' label='position'/>
-          <Input labelText='Main Tasks of Job' label='tasks'/>
-          <Input labelText='Date from:' label='dateFrom'/>
-          <Input labelText='Date until:' label='dateUntil'/>
-        </Section>
+          <Input handleChildInput={handleChildInput} labelText='Company Name' label='company'/>
+          <Input handleChildInput={handleChildInput} labelText='Position Title' label='position'/>
+          <Input handleChildInput={handleChildInput} labelText='Main Tasks of Job' label='tasks'/>
+          <Input handleChildInput={handleChildInput} labelText='Date from:' label='dateFrom'/>
+          <Input handleChildInput={handleChildInput} labelText='Date until:' label='dateUntil'/>
+        </Section> */}
 
         <Section section='submission' sectionTitle='Submission'>
-          <Button/>
+          {/* when button is clicked, take input values from
+          inputs and store into state */}
+          <Button handleSubmit={this.handleSubmit}/>
         </Section>
       </div>
     )

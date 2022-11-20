@@ -7,18 +7,36 @@ class Input extends Component {
 
     this.state = {
       inputLabel: this.props.label,
-      input: {
+      inputInfo: {
         text: '',
         id: uniqid()
       }
     }
   }
+  
+  handleInputChange = (e) => {
+    // console.log(`${this.props.label}: ${e.target.value}`)
+    this.setState({
+      inputInfo: {
+        text: e.target.value,
+        id: this.state.inputInfo.id
+      }
+    })
+
+    this.props.handleChildInput(this.state)
+  }
 
   render() {
     return (
       <div>
-        <label htmlFor={this.props.label}>{this.props.labelText}</label>
-        <input type="text" name="" id={this.props.label} />
+        {/* <label htmlFor={this.props.label}>{this.props.labelText}</label> */}
+        <input
+          onChange={this.handleInputChange}
+          type="text" 
+          name="" 
+          id={this.props.label} 
+          placeholder={this.props.labelText}
+        />
       </div>
     )
   }

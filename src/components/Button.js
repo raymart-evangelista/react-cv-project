@@ -3,21 +3,11 @@ import React, { Component } from 'react'
 class Button extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      
-    }
-  }
-
-  onSubmit() {
-    this.setState({
-
-    })
   }
 
   render() {
     return (
-      <button onSubmit={this.onSubmit}>
+      <button onClick={event => this.props.handleSubmit('hello')}>
         Submit
       </button>
     )
