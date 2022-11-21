@@ -31,26 +31,41 @@ class App extends Component {
       }
     }
 
-    this.handleChildInput = this.handleChildInput.bind(this)
+    this.handleNameInput = this.handleNameInput.bind(this)
+    this.handleEmailInput = this.handleEmailInput.bind(this)
+    this.handlePhoneInput = this.handlePhoneInput.bind(this)
+
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChildInput = childInput => {
-    // childInput.inputLabel
-    // this.childInput = (childInput
+  handleNameInput = childInput => {
+    this.setState({
+      generalInfo: {
+        name: this.state.generalInfo.name = childInput,
+        email: this.state.generalInfo.email,
+        phone: this.state.generalInfo.phone
+      }
+    })
+  }
 
-    // check if inputLabel name is already in array, if so, update, if not, add
+  handleEmailInput = childInput => {
+    this.setState({
+      generalInfo: {
+        name: this.state.generalInfo.name,
+        email: this.state.generalInfo.email = childInput,
+        phone: this.state.generalInfo.phone
+      }
+    })
+  }
 
-    
-    // this.setState({
-    //   // inputList: this.state.inputList.concat(childInput),
-    //   generalInfo: {
-    //     name: this.state.generalInfo.name = childInput.inputInfo.text
-    //   }
-    // })
-    // console.log(this.state.generalInfo.name)
-    // console.log(this.state)
-    console.log(childInput)
+  handlePhoneInput = childInput => {
+    this.setState({
+      generalInfo: {
+        name: this.state.generalInfo.name,
+        email: this.state.generalInfo.email,
+        phone: this.state.generalInfo.phone = childInput,
+      }
+    })
   }
 
   handleSubmit = e => {
@@ -58,15 +73,17 @@ class App extends Component {
     //   inputList: this.state.inputList.concat()
     // })
     console.log(`the name is: ${this.state.generalInfo.name}`)
+    console.log(`the email is: ${this.state.generalInfo.email}`)
+    console.log(`the phone is: ${this.state.generalInfo.phone}`)
   }
 
   render() {
     return (
       <div className='App'>
         <Section section='general' sectionTitle='General Information'>
-          <Input handleChildInput={this.handleChildInput} labelText='Full Name' label='fullName' />
-          {/* <Input handleChildInput={handleChildInput} labelText='Email' label='email' /> */}
-          {/* <Input handleChildInput={handleChildInput} labelText='Phone Number' label='phoneNumber' /> */}
+          <Input handleChildInput={this.handleNameInput} labelText='Full Name' label='fullName' />
+          <Input handleChildInput={this.handleEmailInput} labelText='Email' label='email' />
+          <Input handleChildInput={this.handlePhoneInput} labelText='Phone Number' label='phoneNumber'/>
         </Section>
 {/* 
         <Section section='educational' sectionTitle='Educational Experience'>
