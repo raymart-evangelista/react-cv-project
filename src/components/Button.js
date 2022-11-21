@@ -7,8 +7,8 @@ class Button extends Component {
 
   render() {
     return (
-      <button onClick={event => this.props.handleSubmit('hello')}>
-        Submit
+      <button onClick={this.props.handleButton}>
+        {this.props.name}
       </button>
     )
   }
