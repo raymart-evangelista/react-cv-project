@@ -13,3 +13,4 @@
 - [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
 
 - [deploying react app to github pages](https://medium.com/@isharamalaviarachchi/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e)
+  - [fatal: a branch named 'gh-pages' already exists] (https://stackoverflow.com/questions/63964575/fatal-a-branch-named-gh-pages-already-exists)
