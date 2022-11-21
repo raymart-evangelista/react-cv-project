@@ -14,24 +14,24 @@ class Input extends Component {
     }
   }
   
-  handleInputChange = (e) => {
-    // console.log(`${this.props.label}: ${e.target.value}`)
-    this.setState({
-      inputInfo: {
-        text: e.target.value,
-        id: this.state.inputInfo.id
-      }
-    })
+  // handleInputChange = (e) => {
+  //   // console.log(`${this.props.label}: ${e.target.value}`)
+  //   this.setState({
+  //     inputInfo: {
+  //       text: e.target.value,
+  //       id: this.state.inputInfo.id
+  //     }
+  //   })
 
-    this.props.handleChildInput(this.state)
-  }
+  //   this.props.handleChildInput(this.state)
+  // }
 
   render() {
     return (
       <div>
         {/* <label htmlFor={this.props.label}>{this.props.labelText}</label> */}
         <input
-          onChange={this.handleInputChange}
+          onChange={event => this.props.handleChildInput(event.target.value)}
           type="text" 
           name="" 
           id={this.props.label} 

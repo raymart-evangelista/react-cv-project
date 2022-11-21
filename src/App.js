@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       inputList: [],
       generalInfo: {
-        name: '',
+        name: 'some name',
         email: '',
         phone: '',
       },
@@ -41,18 +41,23 @@ class App extends Component {
 
     // check if inputLabel name is already in array, if so, update, if not, add
 
-    this.setState({
-      inputList: this.state.inputList.concat(childInput),
-    })
-
-    console.log(this.state)
+    
+    // this.setState({
+    //   // inputList: this.state.inputList.concat(childInput),
+    //   generalInfo: {
+    //     name: this.state.generalInfo.name = childInput.inputInfo.text
+    //   }
+    // })
+    // console.log(this.state.generalInfo.name)
+    // console.log(this.state)
+    console.log(childInput)
   }
 
   handleSubmit = e => {
-    this.setState({
-      inputList: this.state.inputList.concat()
-    })
-    console.log(e)
+    // this.setState({
+    //   inputList: this.state.inputList.concat()
+    // })
+    console.log(`the name is: ${this.state.generalInfo.name}`)
   }
 
   render() {
