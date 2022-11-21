@@ -202,7 +202,7 @@ class App extends Component {
             <Section section='practical' sectionTitle='Practical Experience'>
               <Input handleChildInput={this.handleCompanyInput} labelText='Company Name' label='company' value={this.state.experience.company}/>
               <Input handleChildInput={this.handlePositionInput} labelText='Position Title' label='position' value={this.state.experience.position}/>
-              <Input handleChildInput={this.handleTaskInput} labelText='Main Tasks of Job' label='tasks' value={this.state.tasks}/>
+              <Input handleChildInput={this.handleTaskInput} labelText='Main Tasks of Job' label='tasks' value={this.state.experience.tasks}/>
               <Input handleChildInput={this.handleWorkStartInput} labelText='Start Date' label='workStartDate' value={this.state.experience.startDate}/>
               <Input handleChildInput={this.handleWorkEndInput} labelText='End Date' label='workEndDate' value={this.state.experience.endDate}/>
             </Section>
