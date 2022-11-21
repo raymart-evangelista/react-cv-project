@@ -11,3 +11,5 @@
 - [show or hide another component on click in ReactJS](https://bobbyhadz.com/blog/react-onclick-show-component)
 
 - [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+
+- [deploying react app to github pages](https://medium.com/@isharamalaviarachchi/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e)
