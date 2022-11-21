@@ -44,7 +44,7 @@ class App extends Component {
   handleNameInput = childInput => {
     this.setState({
       generalInfo: {
-        name: this.state.generalInfo.name,
+        name: this.state.generalInfo.name = childInput,
         email: this.state.generalInfo.email,
         phone: this.state.generalInfo.phone
       }
@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({
       generalInfo: {
         name: this.state.generalInfo.name,
-        email: this.state.generalInfo.email,
+        email: this.state.generalInfo.email = childInput,
         phone: this.state.generalInfo.phone
       }
     })
@@ -66,7 +66,7 @@ class App extends Component {
       generalInfo: {
         name: this.state.generalInfo.name,
         email: this.state.generalInfo.email,
-        phone: this.state.generalInfo.phone,
+        phone: this.state.generalInfo.phone = childInput,
       }
     })
   }
@@ -74,7 +74,7 @@ class App extends Component {
   handleSchoolInput = childInput => {
     this.setState({
       education: {
-        school: this.state.education.school,
+        school: this.state.education.school = childInput,
         study: this.state.education.study,
         startDate: this.state.education.startDate,
         endDate: this.state.education.endDate,
@@ -86,7 +86,7 @@ class App extends Component {
     this.setState({
       education: {
         school: this.state.education.school,
-        study: this.state.education.study,
+        study: this.state.education.study = childInput,
         startDate: this.state.education.startDate,
         endDate: this.state.education.endDate,
       }
@@ -98,7 +98,7 @@ class App extends Component {
       education: {
         school: this.state.education.school,
         study: this.state.education.study,
-        startDate: this.state.education.startDate,
+        startDate: this.state.education.startDate = childInput,
         endDate: this.state.education.endDate,
       }
     })
@@ -110,7 +110,7 @@ class App extends Component {
         school: this.state.education.school,
         study: this.state.education.study,
         startDate: this.state.education.startDate,
-        endDate: this.state.education.endDate,
+        endDate: this.state.education.endDate = childInput,
       }
     })
   }
@@ -118,7 +118,7 @@ class App extends Component {
   handleCompanyInput = childInput => {
     this.setState({
       experience: {
-        company: this.state.experience.company,
+        company: this.state.experience.company = childInput,
         position: this.state.experience.position,
         tasks: this.state.experience.tasks,
         startDate: this.state.experience.startDate,
@@ -131,7 +131,7 @@ class App extends Component {
     this.setState({
       experience: {
         company: this.state.experience.company,
-        position: this.state.experience.position,
+        position: this.state.experience.position = childInput,
         tasks: this.state.experience.tasks,
         startDate: this.state.experience.startDate,
         endDate: this.state.experience.endDate,
@@ -144,7 +144,7 @@ class App extends Component {
       experience: {
         company: this.state.experience.company,
         position: this.state.experience.position,
-        tasks: this.state.experience.tasks,
+        tasks: this.state.experience.tasks = childInput,
         startDate: this.state.experience.startDate,
         endDate: this.state.experience.endDate,
       }
@@ -157,7 +157,7 @@ class App extends Component {
         company: this.state.experience.company,
         position: this.state.experience.position,
         tasks: this.state.experience.tasks,
-        startDate: this.state.experience.startDate,
+        startDate: this.state.experience.startDate = childInput,
         endDate: this.state.experience.endDate,
       }
     })
@@ -170,7 +170,7 @@ class App extends Component {
         position: this.state.experience.position,
         tasks: this.state.experience.tasks,
         startDate: this.state.experience.startDate,
-        endDate: this.state.experience.endDate,
+        endDate: this.state.experience.endDate = childInput,
       }
     })
   }
@@ -178,7 +178,7 @@ class App extends Component {
   handleButtonClick = e => {
     this.setState({
       showSubmission: !this.state.showSubmission,
-      showInputs: !this.state.showInputs
+      showInputs: !this.state.showInputs,
     })
   }
 
@@ -188,23 +188,23 @@ class App extends Component {
         {this.state.showInputs && (
           <div>
             <Section section='general' sectionTitle='General Information'>
-              <Input handleChildInput={this.handleNameInput} labelText='Full Name' label='fullName' />
-              <Input handleChildInput={this.handleEmailInput} labelText='Email' label='email' />
-              <Input handleChildInput={this.handlePhoneInput} labelText='Phone Number' label='phoneNumber'/>
+              <Input handleChildInput={this.handleNameInput} labelText='Full Name' label='fullName' value={this.state.generalInfo.name}/>
+              <Input handleChildInput={this.handleEmailInput} labelText='Email' label='email' value={this.state.generalInfo.email}/>
+              <Input handleChildInput={this.handlePhoneInput} labelText='Phone Number' label='phoneNumber' value={this.state.generalInfo.phone}/>
             </Section>
             <Section section='educational' sectionTitle='Educational Experience'>
-              <Input handleChildInput={this.handleSchoolInput} labelText='School Name' label='school'/>
-              <Input handleChildInput={this.handleStudyInput} labelText='Title of Study' label='study'/>
-              <Input handleChildInput={this.handleStudyStartInput} labelText='Start Date' label='studyStartDate'/>
-              <Input handleChildInput={this.handleStudyEndInput} labelText='End Date' label='studyEndDate'/>
+              <Input handleChildInput={this.handleSchoolInput} labelText='School Name' label='school' value={this.state.education.school}/>
+              <Input handleChildInput={this.handleStudyInput} labelText='Title of Study' label='study' value={this.state.education.study}/>
+              <Input handleChildInput={this.handleStudyStartInput} labelText='Start Date' label='studyStartDate' value={this.state.education.startDate}/>
+              <Input handleChildInput={this.handleStudyEndInput} labelText='End Date' label='studyEndDate' value={this.state.education.endDate}/>
             </Section>
 
             <Section section='practical' sectionTitle='Practical Experience'>
-              <Input handleChildInput={this.handleCompanyInput} labelText='Company Name' label='company'/>
-              <Input handleChildInput={this.handlePositionInput} labelText='Position Title' label='position'/>
-              <Input handleChildInput={this.handleTaskInput} labelText='Main Tasks of Job' label='tasks'/>
-              <Input handleChildInput={this.handleWorkStartInput} labelText='Start Date' label='workStartDate'/>
-              <Input handleChildInput={this.handleWorkEndInput} labelText='End Date' label='workEndDate'/>
+              <Input handleChildInput={this.handleCompanyInput} labelText='Company Name' label='company' value={this.state.experience.company}/>
+              <Input handleChildInput={this.handlePositionInput} labelText='Position Title' label='position' value={this.state.experience.position}/>
+              <Input handleChildInput={this.handleTaskInput} labelText='Main Tasks of Job' label='tasks' value={this.state.tasks}/>
+              <Input handleChildInput={this.handleWorkStartInput} labelText='Start Date' label='workStartDate' value={this.state.experience.startDate}/>
+              <Input handleChildInput={this.handleWorkEndInput} labelText='End Date' label='workEndDate' value={this.state.experience.endDate}/>
             </Section>
 
             <Section section='submission' sectionTitle='Submission'>
@@ -215,7 +215,7 @@ class App extends Component {
 
         {this.state.showSubmission && (
           <div>
-            <Submission/>
+            <Submission generalInfo={this.state.generalInfo} education={this.state.education} experience={this.state.experience} />
             <Button name='Edit' handleButton={this.handleButtonClick}/>
           </div>
         )}

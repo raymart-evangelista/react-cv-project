@@ -4,14 +4,6 @@ import uniqid from "uniqid"
 class Input extends Component {
   constructor(props) {
     super(props)
-
-    // this.state = {
-    //   inputLabel: this.props.label,
-    //   inputInfo: {
-    //     text: '',
-    //     id: uniqid()
-    //   }
-    // }
   }
 
   render() {
@@ -23,6 +15,7 @@ class Input extends Component {
           name="" 
           id={this.props.label} 
           placeholder={this.props.labelText}
+          value={this.props.value}
         />
       </div>
     )
