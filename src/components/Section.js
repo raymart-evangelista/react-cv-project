@@ -1,18 +1,13 @@
+import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
-class Section extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <div id={this.props.section}>
-        <h1>{this.props.sectionTitle}</h1>
-        {this.props.children}
-      </div>
-    )
-  }
+const Section = ({section, sectionTitle, children}) => {
+  return (
+    <div id={section}>
+      <h1>{sectionTitle}</h1>
+      {children}
+    </div>
+  )
 }
 
 export default Section

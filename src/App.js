@@ -192,14 +192,14 @@ class App extends Component {
               <Input handleChildInput={this.handleEmailInput} labelText='Email' label='email' value={this.state.generalInfo.email}/>
               <Input handleChildInput={this.handlePhoneInput} labelText='Phone Number' label='phoneNumber' value={this.state.generalInfo.phone}/>
             </Section>
-            <Section section='educational' sectionTitle='Educational Experience'>
+            <Section section='educational' sectionTitle='Education'>
               <Input handleChildInput={this.handleSchoolInput} labelText='School Name' label='school' value={this.state.education.school}/>
               <Input handleChildInput={this.handleStudyInput} labelText='Title of Study' label='study' value={this.state.education.study}/>
               <Input handleChildInput={this.handleStudyStartInput} labelText='Start Date' label='studyStartDate' value={this.state.education.startDate}/>
               <Input handleChildInput={this.handleStudyEndInput} labelText='End Date' label='studyEndDate' value={this.state.education.endDate}/>
             </Section>
 
-            <Section section='practical' sectionTitle='Practical Experience'>
+            <Section section='practical' sectionTitle='Work Experience'>
               <Input handleChildInput={this.handleCompanyInput} labelText='Company Name' label='company' value={this.state.experience.company}/>
               <Input handleChildInput={this.handlePositionInput} labelText='Position Title' label='position' value={this.state.experience.position}/>
               <Input handleChildInput={this.handleTaskInput} labelText='Main Tasks of Job' label='tasks' value={this.state.experience.tasks}/>
