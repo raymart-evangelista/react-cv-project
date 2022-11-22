@@ -1,6 +1,3 @@
-import { render } from "@testing-library/react";
-import React, { Component } from "react";
-
 const Section = ({section, sectionTitle, children}) => {
   return (
     <div id={section}>

@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-
 const Input = ({handleChildInput, label, labelText, value}) => {
   return (
     <div>
